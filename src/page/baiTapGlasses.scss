@@ -1,0 +1,26 @@
+.bai-tap-mat-kinh {
+  background: url(./glassesImage/background.jpg) no-repeat center center;
+  background-size: cover;
+  box-shadow: inset 0 0 10px rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.178);
+  .overlay {
+    .title {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ); /* Gradient bóng râm */
+    z-index: 9999;
+    .mat-kinh-choose {
+      .mat-kinh-button {
+        width: calc(100% / 7);
+      }
+    }
+  }
+}
