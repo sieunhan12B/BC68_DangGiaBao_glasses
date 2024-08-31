@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import "./baiTapGlasses.scss";
 const BaiTapGlasses = () => {
-  const [urlMatKinh, setUrlMatKinh] = useState({
-    name: "GUCCI G8850U",
-    url: "./glassesImage/v1.png",
-    desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
-  });
-  console.log(urlMatKinh);
   let arrKinh = [
     {
       id: 1,
@@ -72,6 +66,8 @@ const BaiTapGlasses = () => {
       desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
   ];
+  const [urlMatKinh, setUrlMatKinh] = useState(arrKinh[0]);
+
   return (
     // <div className="bg-red-300 bai-tap-mat-kinh h-screen py-40">
     //   BaiTapGlasses
@@ -114,11 +110,7 @@ const BaiTapGlasses = () => {
                     key={index}
                     className="mat-kinh-button flex item-center m-3   p-2  rounded border-zinc-500  border-2"
                     onClick={() => {
-                      setUrlMatKinh({
-                        name: item.name,
-                        url: item.url,
-                        desc: item.desc,
-                      });
+                      setUrlMatKinh(item);
                     }}
                   >
                     <img className="w-full" src={item.url} alt="" />
